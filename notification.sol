@@ -3,7 +3,7 @@
 pragma solidity ^0.8.7;
 
 /**
- * a simple to-do list
+ * a simple notification app
  */
 
 contract Notify {
