@@ -61,6 +61,11 @@ contract EtherWallet {
         bool sent = _to.send(_amount);
         require(sent, "failed");
     }
+
+    //check balance
+    function getBalance() external view returns (uint) {
+        return address(this).balance;
+    }
 }
 
 //send ethers to this wallet
