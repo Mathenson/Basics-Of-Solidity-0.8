@@ -18,13 +18,20 @@ interface Icounter {
     function count() external view returns (uint);
 
     function increment() external;
+    
+    function decrement() external;
 }
 
 contract callInterface {
     uint public count;
 
-    function calltheInterface(address _counter) external {
+    function increInterface(address _counter) external {
         Icounter(_counter).increment();
+        count = Icounter(_counter).count();
+    }
+
+    function decreInterface(address _counter) external {
+        Icounter(_counter).decrement();
         count = Icounter(_counter).count();
     }
 }
